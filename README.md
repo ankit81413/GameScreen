@@ -25,7 +25,7 @@ If you want to run the website locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/ankit81413/gamescreen.git
+   https://github.com/ankit81413/GameScreen.git
 2. **Navigate to the project folder:**
    ```bash
    cd gamescreen
