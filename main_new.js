@@ -128,10 +128,12 @@ autoplaySwitch.addEventListener("change", function () {
   localStorage.setItem("autoplayStatus", autoplaySwitch.checked);
 });
 
+autoplaySwitch.checked = true;  
+
 // Check local storage for previous switch state
 const savedAutoplayStatus = localStorage.getItem("autoplayStatus");
-if (savedAutoplayStatus === "true") {
-  autoplaySwitch.checked = true;
+if (savedAutoplayStatus === "false") {
+  autoplaySwitch.checked = false;
   // handleAutoplay(); // Autoplay if previously set to 'true'
 }
 
