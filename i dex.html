@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Image from JSON</title>
+</head>
+<body>
+    <h1>Display Image from JSON</h1>
+
+    <!-- This is where the image will be displayed -->
+    <div id="imageContainer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const jsonData = {
+                "0001": {
+                    "name": "Mountains-best-for-desktop-background-wallpaper-preview",
+                    "link": "\\Beast Mode Goku 4k Live Wallpaper _ Dragon Ball _ Anime Live Wallpaper..mp4"
+                }
+                // Add more image data if needed
+            };
+
+            function displayImage(jsonData, key) {
+                const imageUrl = jsonData[key].link;
+
+                // Create an img element
+                const img = document.createElement('video');
+
+                // Set the src attribute to the image URL from JSON
+                img.src = imageUrl;
+
+                // Append the image element to the imageContainer div
+                document.getElementById('imageContainer').appendChild(img);
+            }
+
+            const keyToDisplay = "0001"; // Replace this with the specific key from your JSON
+            displayImage(jsonData, keyToDisplay);
+        });
+    </script>
+</body>
+</html>
+
